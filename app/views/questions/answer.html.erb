@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Stupid Coaching</h1>
+  
+  <div class="card" id="question">
+    <% if @question%>
+      <%=  @question %>
+      <p class="by">-You</p>
+    <% else %>
+      <p class="by">No question yet! :(</p>
+    <% end %>
+  </div>
+
+  <div class="card" id="answer">
+    <% if @answer == "" %>
+      <p class="by">Tis peaceful...</p>
+    <% else %>
+      <%=  @answer %>
+      <p class="by">-Your Coach</p>
+    <% end %>
+  </div>
+
+  <%= link_to 'Ask a new question', "/ask" %>
+</div>
